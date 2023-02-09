@@ -1,16 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero">
-    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-        font-family="none" font-weight="normal" font-size="none" text-anchor="start"
-        style="mix-blend-mode: normal">
-        <g transform="scale(5.33333,5.33333)">
-            <path
-                d="M42,37c0,2.762 -2.238,5 -5,5h-26c-2.761,0 -5,-2.238 -5,-5v-26c0,-2.762 2.239,-5 5,-5h26c2.762,0 5,2.238 5,5z"
-                fill="#090909"></path>
-            <path
-                d="M12,19h5v17h-5zM14.485,17h-0.028c-1.492,0 -2.457,-1.112 -2.457,-2.501c0,-1.419 0.995,-2.499 2.514,-2.499c1.521,0 2.458,1.08 2.486,2.499c0,1.388 -0.965,2.501 -2.515,2.501zM36,36h-5v-9.099c0,-2.198 -1.225,-3.698 -3.192,-3.698c-1.501,0 -2.313,1.012 -2.707,1.99c-0.144,0.35 -0.101,1.318 -0.101,1.807v9h-5v-17h5v2.616c0.721,-1.116 1.85,-2.616 4.738,-2.616c3.578,0 6.261,2.25 6.261,7.274l0.001,9.726z"
-                fill="#ffffff"></path>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="15.333" height="15.333" viewBox="0 0 15.333 15.333">
+  <g id="linkedin-logo" transform="translate(-14 -20)">
+    <g id="post-linkedin" transform="translate(14 20)">
+      <path id="Path_40" data-name="Path 40" d="M13.8,0H1.533A1.538,1.538,0,0,0,0,1.533V13.8a1.538,1.538,0,0,0,1.533,1.533H13.8A1.538,1.538,0,0,0,15.333,13.8V1.533A1.538,1.538,0,0,0,13.8,0ZM4.6,13.033H2.3v-6.9H4.6ZM3.45,4.83A1.38,1.38,0,1,1,4.83,3.45,1.374,1.374,0,0,1,3.45,4.83Zm9.583,8.2h-2.3V8.97a1.15,1.15,0,0,0-2.3,0v4.063h-2.3v-6.9h2.3v.92A2.477,2.477,0,0,1,10.35,5.98a2.716,2.716,0,0,1,2.683,2.683Z" fill="#8c8c8e"/>
     </g>
+  </g>
 </svg>
