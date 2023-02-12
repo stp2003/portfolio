@@ -9,23 +9,26 @@ class MyKnowledge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Divider(height: 10.0),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20.0),
-          child: Text(
-            'Knowledge',
-            style: Theme.of(context).textTheme.subtitle2,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Divider(height: 10.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20.0),
+            child: Text(
+              'Knowledge',
+              style: Theme.of(context).textTheme.subtitle2,
+            ),
           ),
-        ),
-        const MyKnowledgeText(text: 'Flutter, Dart'),
-        const MyKnowledgeText(text: 'Firebase, AppWrite'),
-        const MyKnowledgeText(text: 'Data Structures and Analysis'),
-        const MyKnowledgeText(text: 'Android App Development'),
-        const MyKnowledgeText(text: 'Version Control'),
-      ],
+          const MyKnowledgeText(text: 'Flutter, Dart'),
+          const MyKnowledgeText(text: 'Firebase, AppWrite'),
+          const MyKnowledgeText(text: 'Data Structures and Analysis'),
+          const MyKnowledgeText(text: 'Android App Development'),
+          const MyKnowledgeText(text: 'Version Control'),
+        ],
+      ),
     );
   }
 }

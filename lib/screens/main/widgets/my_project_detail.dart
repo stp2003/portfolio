@@ -19,24 +19,33 @@ class MyProjectsDetails extends StatelessWidget {
         const SizedBox(height: 20.0),
 
         //* grid to show projects ->
-        GridView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          itemCount: demoProjects.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1.3,
-            crossAxisSpacing: 20.0,
-            mainAxisSpacing: 20.0,
-          ),
-          itemBuilder: (context, index) => ProjectCard(
-            project: demoProjects[index],
-            
-          ),
-        ),
+        const ProjectsGridView(),
         const SizedBox(height: 20.0),
       ],
     );
   }
 }
 
+class ProjectsGridView extends StatelessWidget {
+  const ProjectsGridView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: demoProjects.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        childAspectRatio: 1.3,
+        crossAxisSpacing: 20.0,
+        mainAxisSpacing: 20.0,
+      ),
+      itemBuilder: (context, index) => ProjectCard(
+        project: demoProjects[index],
+      ),
+    );
+  }
+}

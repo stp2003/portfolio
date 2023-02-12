@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive/responsive_info.dart';
 
 class Highlights extends StatelessWidget {
   const Highlights({
@@ -14,13 +15,13 @@ class Highlights extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        counter,
-        const SizedBox(width: 10.0),
-        Text(
-          lable!,
-          style: Theme.of(context).textTheme.subtitle1,
-        ),
-        
+        if (!Responsive.isMobileLarge(context)) counter,
+        if (!Responsive.isMobileLarge(context)) const SizedBox(width: 10.0),
+        if (!Responsive.isMobileLarge(context))
+          Text(
+            lable!,
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
       ],
     );
   }

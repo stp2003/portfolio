@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive/responsive_info.dart';
 
 import 'flutter_coded_text.dart';
 
@@ -14,8 +15,8 @@ class ProjectsAnimatedText extends StatelessWidget {
       style: Theme.of(context).textTheme.subtitle1!,
       child: Row(
         children: [
-          const FlutterCodedText(),
-          const SizedBox(width: 10.0),
+          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
+          if (!Responsive.isMobileLarge(context)) const SizedBox(width: 10.0),
           const Text('I build '),
           AnimatedTextKit(
             animatedTexts: [
@@ -41,8 +42,8 @@ class ProjectsAnimatedText extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(width: 10.0),
-          const FlutterCodedText(),
+          if (!Responsive.isMobileLarge(context)) const SizedBox(width: 10.0),
+          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
         ],
       ),
     );
