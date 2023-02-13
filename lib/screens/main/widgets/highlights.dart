@@ -15,13 +15,12 @@ class Highlights extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        if (!Responsive.isMobileLarge(context)) counter,
-        if (!Responsive.isMobileLarge(context)) const SizedBox(width: 10.0),
-        if (!Responsive.isMobileLarge(context))
-          Text(
-            lable!,
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
+        counter,
+        const SizedBox(width: 10.0),
+        Text(
+          lable!,
+          style: Theme.of(context).textTheme.subtitle1,
+        ),
       ],
     );
   }

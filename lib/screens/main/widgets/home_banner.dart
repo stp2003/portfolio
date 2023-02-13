@@ -13,7 +13,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 3,
+      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -43,7 +43,7 @@ class HomeBanner extends StatelessWidget {
                           ),
                 ),
                 if (!Responsive.isMobileLarge(context))
-                  const SizedBox(height: 20.0),
+                  const SizedBox(height: 10.0),
                 const ProjectsAnimatedText(),
                 const SizedBox(height: 20.0),
                 if (!Responsive.isMobileLarge(context))

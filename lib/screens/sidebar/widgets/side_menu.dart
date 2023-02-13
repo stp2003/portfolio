@@ -17,41 +17,43 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: [
-          const MyInfo(),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(
-                defaultPadding,
-              ),
-              child: Column(
-                children: const [
-                  AreaInfo(
-                    title: 'Residence',
-                    text: 'India',
-                  ),
-                  AreaInfo(
-                    title: 'State',
-                    text: 'Uttar Pradesh',
-                  ),
-                  AreaInfo(
-                    title: 'City',
-                    text: 'Varanasi',
-                  ),
-                  Skills(),
-                  SizedBox(height: 8.0),
-                  Coding(),
-                  MyKnowledge(),
-                  Divider(),
-                  SizedBox(height: 10.0),
-                  CV(),
-                  Socials()
-                ],
+      child: SafeArea(
+        child: Column(
+          children: [
+            const MyInfo(),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(
+                  defaultPadding,
+                ),
+                child: Column(
+                  children: const [
+                    AreaInfo(
+                      title: 'Residence',
+                      text: 'India',
+                    ),
+                    AreaInfo(
+                      title: 'State',
+                      text: 'Uttar Pradesh',
+                    ),
+                    AreaInfo(
+                      title: 'City',
+                      text: 'Varanasi',
+                    ),
+                    Skills(),
+                    SizedBox(height: 8.0),
+                    Coding(),
+                    MyKnowledge(),
+                    Divider(),
+                    SizedBox(height: 10.0),
+                    CV(),
+                    Socials()
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

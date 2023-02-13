@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/models/projects_info.dart';
+import 'package:portfolio/responsive/responsive_info.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
@@ -34,6 +35,10 @@ class ProjectCard extends StatelessWidget {
             const SizedBox(height: 20.0),
             Text(
               project.description!,
+              maxLines: Responsive.isMobileLarge(context)
+                  ? project.description!.length
+                  : project.description!.length,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 height: 1.5,
               ),
@@ -45,10 +50,10 @@ class ProjectCard extends StatelessWidget {
               onPressed: () {
                 js.context.callMethod('open', [project.link!]);
               },
-              child:  Text(
+              child: Text(
                 'Know More >>',
                 style: TextStyle(
-                  color: project.color,
+                  color: project.buttonColor,
                 ),
               ),
             ),

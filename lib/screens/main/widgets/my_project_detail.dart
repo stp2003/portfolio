@@ -1,5 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:portfolio/models/projects_info.dart';
+import 'package:portfolio/responsive/responsive_info.dart';
 import 'package:portfolio/screens/main/widgets/project_card.dart';
 
 class MyProjectsDetails extends StatelessWidget {
@@ -19,8 +22,21 @@ class MyProjectsDetails extends StatelessWidget {
         const SizedBox(height: 20.0),
 
         //* grid to show projects ->
-        const ProjectsGridView(),
-        const SizedBox(height: 20.0),
+        const Responsive(
+          mobile: ProjectsGridView(
+            crossAxisCount: 1,
+            childAspectRatio: 1.7,
+          ),
+          mobileLarge: ProjectsGridView(
+            crossAxisCount: 2,
+          ),
+          tablet: ProjectsGridView(
+            childAspectRatio: 1.1,
+          ),
+          desktop: ProjectsGridView(),
+        ),
+
+        // const SizedBox(height: 20.0),
       ],
     );
   }
@@ -29,7 +45,12 @@ class MyProjectsDetails extends StatelessWidget {
 class ProjectsGridView extends StatelessWidget {
   const ProjectsGridView({
     Key? key,
+    this.crossAxisCount = 3,
+    this.childAspectRatio = 1.3,
   }) : super(key: key);
+
+  final int crossAxisCount;
+  final double childAspectRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +58,9 @@ class ProjectsGridView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: demoProjects.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        childAspectRatio: 1.3,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: childAspectRatio,
         crossAxisSpacing: 20.0,
         mainAxisSpacing: 20.0,
       ),
