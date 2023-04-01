@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive/responsive_info.dart';
 import 'package:portfolio/screens/main/widgets/project_animated_text.dart';
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
+import 'package:url_launcher/url_launcher.dart';
+
 import '../../../constants.dart';
 
 class HomeBanner extends StatelessWidget {
@@ -48,9 +48,16 @@ class HomeBanner extends StatelessWidget {
                 const SizedBox(height: 20.0),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {
-                      js.context
-                          .callMethod('open', ['https://github.com/stp2003']);
+                    onPressed: () async {
+                      // js.context
+                      //     .callMethod('open', ['https://github.com/stp2003']);
+                      const url = 'https://github.com/stp2003';
+                      final uri = Uri.parse(url);
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(uri);
+                      } else {
+                        // can't launch url
+                      }
                     },
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.symmetric(

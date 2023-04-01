@@ -1,7 +1,6 @@
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CV extends StatelessWidget {
   const CV({
@@ -11,10 +10,18 @@ class CV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        js.context.callMethod('open', [
-          'https://drive.google.com/file/d/1HBp8DgnX7Ej8XZA1GDg1_jJYNQmCVaC8/view?usp=share_link'
-        ]);
+      onPressed: () async {
+        // js.context.callMethod('open', [
+        //   'https://drive.google.com/file/d/1HBp8DgnX7Ej8XZA1GDg1_jJYNQmCVaC8/view?usp=share_link'
+        // ]);
+        const url =
+            'https://drive.google.com/file/d/1HBp8DgnX7Ej8XZA1GDg1_jJYNQmCVaC8/view?usp=share_link';
+        final uri = Uri.parse(url);
+        if (await canLaunchUrl(uri)) {
+          await launchUrl(uri);
+        } else {
+          // can't launch url
+        }
       },
       child: FittedBox(
         child: Row(

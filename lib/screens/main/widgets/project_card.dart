@@ -1,11 +1,8 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
-
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/models/projects_info.dart';
 import 'package:portfolio/responsive/responsive_info.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
@@ -47,8 +44,16 @@ class ProjectCard extends StatelessWidget {
 
             //* button to github link ->
             TextButton(
-              onPressed: () {
-                js.context.callMethod('open', [project.link!]);
+              onPressed: () async {
+                // js.context.callMethod('open', [project.link!]);
+
+                var url = project.link;
+                final uri = Uri.parse(url!);
+                if (await canLaunchUrl(uri)) {
+                  await launchUrl(uri);
+                } else {
+                  // can't launch url
+                }
               },
               child: Text(
                 'Know More >>',

@@ -1,7 +1,6 @@
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Socials extends StatelessWidget {
   const Socials({
@@ -17,15 +16,29 @@ class Socials extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           IconButton(
-            onPressed: () {
-              js.context.callMethod(
-                  'open', ['https://www.linkedin.com/in/shashwat-shandilya/']);
+            onPressed: () async {
+              // js.context.callMethod(
+              //     'open', ['https://www.linkedin.com/in/shashwat-shandilya/']);
+              const url = 'https://www.linkedin.com/in/shashwat-shandilya/';
+              final uri = Uri.parse(url);
+              if (await canLaunchUrl(uri)) {
+                await launchUrl(uri);
+              } else {
+                // can't launch url
+              }
             },
             icon: SvgPicture.asset('assets/icons/linkedin.svg'),
           ),
           IconButton(
-            onPressed: () {
-              js.context.callMethod('open', ['https://github.com/stp2003']);
+            onPressed: () async {
+              // js.context.callMethod('open', ['https://github.com/stp2003']);
+              const url = 'https://github.com/stp2003';
+              final uri = Uri.parse(url);
+              if (await canLaunchUrl(uri)) {
+                await launchUrl(uri);
+              } else {
+                // can't launch url
+              }
             },
             icon: SvgPicture.asset('assets/icons/github.svg'),
           ),

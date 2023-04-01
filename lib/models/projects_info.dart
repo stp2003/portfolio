@@ -17,7 +17,7 @@ List<ProjectInfo> demoProjects = [
   ProjectInfo(
     title: "Responsive Chat App with firebase backend - Baat Cheet",
     description:
-        "This is a fully responsive Chat App integarted with firebase backend and uses riverpod 2.0 for state management. This app has it all- phone number verification, one to one chatting , group chatting, 24-hour based status funtionality, user online or offline verification, message seen or not verification, replying to a particular message, sharing emojis, gifs, pictures, video and audio, and calling funtionality with your contacts who uses this app.",
+        "This is a fully responsive Chat App integrated with firebase backend and uses riverpod 2.0 for state management. This app has it all- phone number verification, one to one chatting , group chatting, 24-hour based status funtionality, user online or offline verification, message seen or not verification, replying to a particular message, sharing emojis, gifs, pictures, video and audio, and calling funtionality with your contacts who uses this app.",
     link: 'https://github.com/stp2003/Baat-Cheet',
     buttonColor: primaryColor,
   ),
@@ -29,7 +29,7 @@ List<ProjectInfo> demoProjects = [
     buttonColor: ternaryColor,
   ),
   ProjectInfo(
-    title: "Wheather App",
+    title: "Whether App",
     description:
         "This is simple weather app which fetches the data from wheatherapi.com and show the weather of a given searched place. It has a really beautiful UI which shows the weather of an entire week. This is 2 screen app which shows the weather in detail and shows corresponding images to make a good user experience.",
     link: 'https://github.com/stp2003/whether_app_flutter',
@@ -52,7 +52,7 @@ List<ProjectInfo> demoProjects = [
   ProjectInfo(
     title: "Flutter Apps with ML Integration",
     description:
-        "I have made few flutter projects with ML intergration like speech to text convertor, text to speech convertor and a qr-code generator and scanner, whic scans any given qr and opens in browser and it can also generate a qr-code for any text, photo or any link.",
+        "I have made few flutter projects with ML integration like speech to text convertor, text to speech convertor and a qr-code generator and scanner, whic scans any given qr and opens in browser and it can also generate a qr-code for any text, photo or any link.",
     link: 'https://github.com/stp2003/tts_flutter',
     buttonColor: ternaryColor,
   ),

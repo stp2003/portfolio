@@ -1,9 +1,8 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/models/recommendations.dart';
 import 'package:portfolio/responsive/responsive_info.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyRecommendationCard extends StatelessWidget {
   const MyRecommendationCard({
@@ -27,8 +26,15 @@ class MyRecommendationCard extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
           TextButton(
-            onPressed: () {
-              js.context.callMethod('open', [recommendation.link!]);
+            onPressed: () async {
+              // js.context.callMethod('open', [recommendation.link!]);
+              var url = recommendation.link;
+              final uri = Uri.parse(url!);
+              if (await canLaunchUrl(uri)) {
+                await launchUrl(uri);
+              } else {
+                // can't launch url
+              }
             },
             child: Text(
               recommendation.source!,

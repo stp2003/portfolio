@@ -21,7 +21,7 @@ class HighLightsInfo extends StatelessWidget {
                   children: const [
                     Highlights(
                       counter: AnimatedCounter(
-                        value: 35,
+                        value: 55,
                         text: '+',
                       ),
                       lable: 'Github Projects',
