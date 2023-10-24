@@ -30,7 +30,6 @@ class MyRecommendationCard extends StatelessWidget {
           ),
           TextButton(
             onPressed: () async {
-              // js.context.callMethod('open', [recommendation.link!]);
               var url = recommendation.link;
               final uri = Uri.parse(url!);
               if (await canLaunchUrl(uri)) {

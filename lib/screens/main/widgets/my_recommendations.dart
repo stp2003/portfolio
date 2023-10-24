@@ -4,8 +4,8 @@ import 'package:portfolio/screens/main/widgets/my_recommendations_card.dart';
 
 class MyRecommendations extends StatelessWidget {
   const MyRecommendations({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

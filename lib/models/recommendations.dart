@@ -11,7 +11,7 @@ class Recommendation {
 
 final List<Recommendation> demoRecommendations = [
   Recommendation(
-    name: "Lorem Ipsum",
+    name: "Ankita Soni",
     source: "Linkedin",
     link: 'https://www.linkedin.com/in/ankita-soni-17430a221/',
     text:
