@@ -3,11 +3,11 @@ import 'package:portfolio/constants.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   const AnimatedCircularProgressIndicator({
-    Key? key,
+    super.key,
     required this.percentage,
     required this.label,
     required this.color,
-  }) : super(key: key);
+  });
 
   final double percentage;
   final String label;
@@ -36,7 +36,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                 Center(
                   child: Text(
                     '${(value * 100).toInt()}%',
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
               ],
@@ -48,7 +48,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       ],
     );

@@ -4,8 +4,8 @@ import 'package:portfolio/screens/sidebar/widgets/animated_circular_progress_ind
 
 class Skills extends StatelessWidget {
   const Skills({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,8 @@ class Skills extends StatelessWidget {
         ),
 
         //*** circular progress indicator ->
-        Row(
-          children: const [
+        const Row(
+          children: [
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.8,

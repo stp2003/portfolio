@@ -6,10 +6,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
-    Key? key,
+    super.key,
     required this.project,
     this.color,
-  }) : super(key: key);
+  });
 
   final ProjectInfo project;
   final Color? color;
@@ -27,7 +27,7 @@ class ProjectCard extends StatelessWidget {
               project.title!,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.subtitle2,
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(height: 20.0),
             Text(
@@ -45,8 +45,6 @@ class ProjectCard extends StatelessWidget {
             //* button to github link ->
             TextButton(
               onPressed: () async {
-                // js.context.callMethod('open', [project.link!]);
-
                 var url = project.link;
                 final uri = Uri.parse(url!);
                 if (await canLaunchUrl(uri)) {

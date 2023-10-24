@@ -8,7 +8,7 @@ import 'package:portfolio/screens/sidebar/side_home_screen.dart';
 import 'widgets/my_project_detail.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class HomeScreen extends StatelessWidget {
       children: [
         HomeBanner(),
 
-        //* no. of projects ->
+        //*** no. of projects ->
         HighLightsInfo(),
 
         //?? my projects ->
         MyProjectsDetails(),
 
-        //?? recomendations on me ->
+        //?? recommendations on me ->
         MyRecommendations(),
       ],
     );

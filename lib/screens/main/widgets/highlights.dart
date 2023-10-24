@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/responsive/responsive_info.dart';
 
 class Highlights extends StatelessWidget {
   const Highlights({
-    Key? key,
+    super.key,
     required this.counter,
     this.lable,
-  }) : super(key: key);
+  });
 
   final Widget counter;
   final String? lable;
@@ -19,7 +18,7 @@ class Highlights extends StatelessWidget {
         const SizedBox(width: 10.0),
         Text(
           lable!,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ],
     );

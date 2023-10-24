@@ -11,23 +11,23 @@ import 'my_skill.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       child: SafeArea(
         child: Column(
           children: [
-            const MyInfo(),
+            MyInfo(),
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.all(
+                padding: EdgeInsets.all(
                   defaultPadding,
                 ),
                 child: Column(
-                  children: const [
+                  children: [
                     AreaInfo(
                       title: 'Residence',
                       text: 'India',

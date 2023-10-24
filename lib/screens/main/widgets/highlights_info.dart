@@ -6,19 +6,19 @@ import 'package:portfolio/screens/main/widgets/highlights.dart';
 
 class HighLightsInfo extends StatelessWidget {
   const HighLightsInfo({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: Responsive.isMobileLarge(context)
-          ? Column(
+          ? const Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Highlights(
                       counter: AnimatedCounter(
                         value: 55,
@@ -29,17 +29,17 @@ class HighLightsInfo extends StatelessWidget {
                     Highlights(
                       counter: AnimatedCounter(
                         value: 8,
-                        text: '.98',
+                        text: '.97',
                         color: primaryColor,
                       ),
                       lable: 'CGPA',
                     ),
                   ],
                 ),
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Highlights(
                       counter: AnimatedCounter(
                         value: 5,
@@ -60,12 +60,12 @@ class HighLightsInfo extends StatelessWidget {
                 ),
               ],
             )
-          : Row(
+          : const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Highlights(
                   counter: AnimatedCounter(
-                    value: 35,
+                    value: 55,
                     text: '+',
                   ),
                   lable: 'Github Projects',
@@ -73,7 +73,7 @@ class HighLightsInfo extends StatelessWidget {
                 Highlights(
                   counter: AnimatedCounter(
                     value: 8,
-                    text: '.98',
+                    text: '.97',
                     color: primaryColor,
                   ),
                   lable: 'CGPA',
