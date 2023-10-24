@@ -19,7 +19,10 @@ class ProjectCard extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         padding: const EdgeInsets.all(20.0),
-        color: secondaryColor,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: secondaryColor,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

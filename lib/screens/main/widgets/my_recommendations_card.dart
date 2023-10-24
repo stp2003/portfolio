@@ -6,9 +6,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class MyRecommendationCard extends StatelessWidget {
   const MyRecommendationCard({
-    Key? key,
+    super.key,
     required this.recommendation,
-  }) : super(key: key);
+  });
 
   final Recommendation recommendation;
 
@@ -17,13 +17,16 @@ class MyRecommendationCard extends StatelessWidget {
     return Container(
       width: Responsive.isMobile(context) ? 380.0 : 400.0,
       padding: const EdgeInsets.all(20.0),
-      color: secondaryColor,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        color: secondaryColor,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             recommendation.name!,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           TextButton(
             onPressed: () async {
